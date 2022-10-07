@@ -1,0 +1,13 @@
+
+
+@media (min-width: 470px) {
+  .MainLayout {
+    // display: grid;
+    // grid-template-columns: 1fr 3fr;
+    display: flex;
+    flex-direction: row;
+  }
+  .children {
+    width: 90%;
+  }
+}

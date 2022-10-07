@@ -1,0 +1,21 @@
+@import 'vars';
+.Content {
+    background-color: $--night-blue;
+    // height: 100vh;
+}  
+.RecomendedContainer{
+    padding: 0 20px;
+}
+
+.title{
+    font-weight: 400;
+    font-size: 1.6rem;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 20px;
+}
+.GridContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}

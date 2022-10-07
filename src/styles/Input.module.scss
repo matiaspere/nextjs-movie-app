@@ -1,0 +1,19 @@
+@import 'vars';
+
+.input{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+}
+.input input{
+    margin-left: 10px;
+    height: 30px;
+    background-color: $--night-blue;
+    border: none;
+    width: 100%;
+}
+.input input:focus{
+    outline: none;
+}

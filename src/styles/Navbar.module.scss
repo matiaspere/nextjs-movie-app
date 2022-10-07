@@ -1,0 +1,46 @@
+@import 'vars';
+
+.Navbar{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $--night-blue-light;
+    gap: 40px;
+    padding: 15px 0px;
+}
+.Navbar ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: center;
+    gap: 15px;
+}
+.Navbar ul li:hover{
+    cursor: pointer;
+}
+.avatar{
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+@media (min-width: 470px) {
+    .Navbar{
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+        border-radius: 12px;
+        padding: 20px;
+    }
+    .Navbar ul{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 800px;
+    }
+}

@@ -1,0 +1,42 @@
+@import 'vars';
+
+.CardContainer{
+    font-weight: 300;
+
+}
+.CardContainerImages{
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+}
+.CardContainerText{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px 0 10px;
+}
+.CardContainerTextUp{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    font-size: 0.8rem;
+}
+.CardContainerTextDown{
+    display: flex;
+    flex-direction: row;
+}
+.title{
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.bookmarkContainer{
+    background-color: rgba(70, 69, 69, 0.679);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}

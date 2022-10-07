@@ -1,0 +1,17 @@
+.Slider{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    padding: 20px 20px 0 20px;
+}
+.Slider::-webkit-scrollbar{
+    display: none;
+}
+.trendingTitle{
+    font-weight: 400;
+    font-size: 1.6rem;
+    margin-left: 20px;
+}
