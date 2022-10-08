@@ -13,13 +13,14 @@
 .CardContainerText{
     display: flex;
     flex-direction: column;
-    padding: 10px 10px 0 10px;
+    margin: 15px 0;
 }
 .CardContainerTextUp{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 5px;
+    align-items: center;
+    margin-bottom: 10px;
     font-size: 0.8rem;
 }
 .CardContainerTextDown{

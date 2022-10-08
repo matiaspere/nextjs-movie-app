@@ -12,18 +12,8 @@ const url = `https://api.themoviedb.org/3/tv/popular?api_key=f31930be708a30c107a
 
 
 const MovieLayout = () => {
-  const { tv, setTv, searchValue, setSearchValue, onClose } = React.useContext(AppContext);
+  const { bookmarked, setBookmarked, searchValue, setSearchValue, onClose } = React.useContext(AppContext);
 
-  React.useEffect(() => {
-    async function fetchData() {
-      const res = await fetch(url);
-      const data = await res.json();
-      setTv(data.results);
-    }
-    fetchData();
-  }, []);
-
-  console.log(tv)
   return (
     <div>
       {searchValue ? (
@@ -37,8 +27,8 @@ const MovieLayout = () => {
       ) : (
         <>
           <Input />
-          <p className={style.title}>Tv Series</p>
-          <MainGrid state={tv} />
+          <p className={style.title}>Bookmarked</p>
+          <MainGrid state={bookmarked} />
         </>
       )}
     </div>

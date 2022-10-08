@@ -31,6 +31,7 @@ const CardSliderContainer = () => {
             adult={i.adult}
             media_type={i.media_type}
             date={i.release_date}
+            vote={i.vote_average}
           />
         ))}
       </div>

@@ -27,14 +27,16 @@ const Navbar = () => {
               <Image width={size} height={size} src={movie} />
             </li>
           </Link>
-          <Link href='tv'>
+          <Link href="/tv">
             <li>
               <Image width={size} height={size} src={tv} />
             </li>
           </Link>
-          <li>
-            <Image width={size} height={size} src={solidBookmark} />
-          </li>
+          <Link href="/bookmarked">
+            <li>
+              <Image width={size} height={size} src={solidBookmark} />
+            </li>
+          </Link>
         </ul>
         <div className={style.avatar}>
           <Image src={avatar} />

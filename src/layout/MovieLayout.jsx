@@ -18,10 +18,12 @@ const MovieLayout = () => {
       const res = await fetch(url);
       const data = await res.json();
       setMovies(data.results);
-      console.log(movies);
     }
     fetchData();
   }, []);
+
+  console.log(movies)
+
   return (
     <div>
       {searchValue ? (
