@@ -4,7 +4,6 @@ import style from "@styles/RecommendedGrid.module.scss";
 import CardSlider from "@components/CardSlider";
 
 const RecommendedGrid = ({ state }) => {
-  console.log(state)
   return (
     <div className={style.RecomendedContainer}>
       <div className={style.GridContainer}>
@@ -20,6 +19,7 @@ const RecommendedGrid = ({ state }) => {
           ))}
        
       </div>
+      {state.length == 0 && <p>No results found : (</p>}
     </div>
   );
 };
