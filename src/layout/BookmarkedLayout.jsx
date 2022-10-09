@@ -12,10 +12,10 @@ const url = `https://api.themoviedb.org/3/tv/popular?api_key=f31930be708a30c107a
 
 
 const MovieLayout = () => {
-  const { bookmarked, setBookmarked, searchValue, setSearchValue, onClose } = React.useContext(AppContext);
+  const { bookmarked, setBookmarked, searchValue, setSearchValue, onClose, darkMode } = React.useContext(AppContext);
 
   return (
-    <div>
+    <div className={darkMode ? style.ContentLight : style.Content}>
       {searchValue ? (
         <>
           <Input />

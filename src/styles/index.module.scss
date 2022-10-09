@@ -2,5 +2,10 @@
 
 .Content {
   background-color: $--night-blue;
+  color: white;
+}
+.ContentLight{
+  background-color: white;
+  color: $--night-blue;
 }
 

@@ -1,29 +1,48 @@
-@import 'vars';
+@import "vars";
 
-.input{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 20px;
+.input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  
 }
-.input input{
-    margin-left: 10px;
-    height: 30px;
-    background-color: $--night-blue;
-    border: none;
-    width: 100%;
+.input input {
+  margin-left: 10px;
+  height: 30px;
+  background-color: $--night-blue;
+  border: none;
+  width: 100%;
+  color: white;
 }
-.input input:focus{
-    outline: none;
+.input input:focus {
+  outline: none;
 }
-.button{
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
+.button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
-@media (min-width: 470px) {
-    .input{
-        margin-top: 20px;
-    }
+.inputLight {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
 }
+.inputLight input {
+  margin-left: 10px;
+  height: 30px;
+  background-color: white;
+  border: none;
+  width: 100%;
+}
+// @media (min-width: 470px) {
+//     .input{
+//         margin-top: 20px;
+//     }
+//     .inputLight{
+//         margin-top: 20px;
+//     }
+// }

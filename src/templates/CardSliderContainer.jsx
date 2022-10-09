@@ -6,19 +6,9 @@ import style from "@styles/CardSliderContainer.module.scss";
 const API_KEY = "f31930be708a30c107a4b2c3659d8d46";
 
 const CardSliderContainer = () => {
-  const { trending, setTrending } = React.useContext(AppContext);
+  const { trending } = React.useContext(AppContext);
 
-  React.useEffect(() => {
-    async function fetchData() {
-      const res = await fetch(
-        "https://api.themoviedb.org/3/trending/movie/day?api_key=" + API_KEY
-      );
-      const data = await res.json();
-      setTrending(data.results);
-    }
-    fetchData();
-  }, []);
-
+  console.log(trending)
   return (
     <>
       <h3 className={style.trendingTitle}>Trending</h3>
@@ -32,6 +22,7 @@ const CardSliderContainer = () => {
             media_type={i.media_type}
             date={i.release_date}
             vote={i.vote_average}
+            booked={i.booked}
           />
         ))}
       </div>

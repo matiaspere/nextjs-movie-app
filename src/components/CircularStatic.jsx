@@ -1,10 +1,12 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
 import CircularProgress from '@mui/material/CircularProgress';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import AppContext from 'context/AppContext';
+import style from '@styles/CircularStatic.module.scss'
 
 const CircularProgressWithLabel =({value}) => {
+  const {darkMode} = React.useContext(AppContext);
   return (
     <Box sx={{ position: 'relative', display: 'inline-flex' }}>
       <CircularProgress variant='determinate' value={value*10} size={40} />
@@ -22,7 +24,7 @@ const CircularProgressWithLabel =({value}) => {
         }}
       >
         <Typography variant="caption" component="div" color="text.secondary" >
-          <p>{value}</p>
+          <p className={darkMode ? style.textLight : style.text}>{value}</p>
         </Typography>
       </Box>
     </Box>

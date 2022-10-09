@@ -2,13 +2,15 @@ import React from "react";
 import Image from "next/image";
 import AppContext from "context/AppContext";
 import search from "@images/search.svg";
+import searchBlack from "@images/searchBlack.svg";
 import style from "@styles/Input.module.scss";
 
 // const url = `https://api.themoviedb.org/3/search/movie?api_key=f31930be708a30c107a4b2c3659d8d46&language=en-US&page=1&query=${searchValue}`;
 
 const Input = () => {
   const [inputValue, setInputValue] = React.useState("");
-  const { searchValue, setSearchValue } = React.useContext(AppContext);
+  const { searchValue, setSearchValue, darkMode } =
+    React.useContext(AppContext);
 
   const handleInput = (e) => {
     setInputValue(e.target.value);
@@ -20,8 +22,8 @@ const Input = () => {
     );
     const data = await res.json();
     setSearchValue(data);
-    console.log(data)
-  };
+    console.log(data);
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -31,10 +33,19 @@ const Input = () => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit} className={style.input}>
-        <button className={style.button} type="submit">
-          <Image src={search} />
-        </button>
+      <form
+        onSubmit={handleSubmit}
+        className={darkMode ? style.inputLight : style.input}
+      >
+        {darkMode ? (
+          <button className={style.button} type="submit">
+            <Image src={searchBlack} />
+          </button>
+        ) : (
+          <button className={style.button} type="submit">
+            <Image src={search} />
+          </button>
+        )}
         <input
           value={inputValue}
           onChange={handleInput}

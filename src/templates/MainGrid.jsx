@@ -4,6 +4,7 @@ import CardSlider from "@components/CardSlider";
 
 const RecommendedGrid = ({ state }) => {
 
+    
   return (
     <div className={style.RecomendedContainer}>
       <div className={style.GridContainer}>
@@ -14,6 +15,7 @@ const RecommendedGrid = ({ state }) => {
               image={i.poster_path ? "https://image.tmdb.org/t/p/w300" + i.poster_path : i.image}
               date={i.release_date || i.first_air_date  || i.date}
               vote={i.vote_average  || i.vote}
+              booked={i.booked}
             />
           ))}
        

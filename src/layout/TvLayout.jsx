@@ -7,23 +7,11 @@ import Image from "next/image";
 import arrow from "@images/arrow.svg";
 
 
-const API_KEY = "f31930be708a30c107a4b2c3659d8d46";
-const url = `https://api.themoviedb.org/3/tv/popular?api_key=f31930be708a30c107a4b2c3659d8d46&language=en-US&page=1`;
 
-
-const MovieLayout = () => {
+const TvLayout = () => {
   const { tv, setTv, searchValue, setSearchValue, onClose } = React.useContext(AppContext);
 
-  React.useEffect(() => {
-    async function fetchData() {
-      const res = await fetch(url);
-      const data = await res.json();
-      setTv(data.results);
-    }
-    fetchData();
-  }, []);
 
-  console.log(tv)
   return (
     <div>
       {searchValue ? (
@@ -45,5 +33,5 @@ const MovieLayout = () => {
   )
 }
 
-export default MovieLayout;
+export default TvLayout;
 
